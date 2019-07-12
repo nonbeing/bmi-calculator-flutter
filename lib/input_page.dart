@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'top_card.dart';
+import 'reusable_card.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColor = Color(0xFF1d1e33);
@@ -24,29 +26,17 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 ReusableCard(
                   cardColor: activeCardColor,
-                  cardChild: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        FontAwesomeIcons.mars,
-                        size: 80.0,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      Text(
-                        'MALE',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          color: Color(0xFF8d8e98),
-                        ),
-                      ),
-                    ],
+                  cardChild: new TopCard(
+                    iconName: FontAwesomeIcons.mars,
+                    cardText: 'MALE',
                   ),
                 ),
                 ReusableCard(
                   cardColor: activeCardColor,
+                  cardChild: new TopCard(
+                    iconName: FontAwesomeIcons.venus,
+                    cardText: 'FEMALE',
+                  ),
                 ),
               ],
             ),
@@ -78,27 +68,6 @@ class _InputPageState extends State<InputPage> {
               width: double.infinity,
               height: bottomContainerHeight),
         ],
-      ),
-    );
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-  final Color cardColor;
-  final Widget cardChild;
-
-  ReusableCard({@required this.cardColor, this.cardChild});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        child: cardChild,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: cardColor,
-        ),
-        margin: EdgeInsets.all(15.0),
       ),
     );
   }
