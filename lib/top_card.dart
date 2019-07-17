@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-
-const textColor = Color(0xFF8d8e98);
-
-const labelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: textColor,
-);
+import 'constants.dart';
 
 class TopCard extends StatelessWidget {
   final IconData iconName;
@@ -27,7 +21,7 @@ class TopCard extends StatelessWidget {
         ),
         Text(
           cardText,
-          style: labelTextStyle,
+          style: kLabelTextStyle,
         ),
       ],
     );
