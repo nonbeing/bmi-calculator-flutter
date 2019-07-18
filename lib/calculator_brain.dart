@@ -17,24 +17,24 @@ class CalculatorBrain {
       return {
         'result': 'Obese',
         'interpretation':
-            'You have a higher body weight than normal and are at increased risk of associated health problems. Try to lose some weight by a suitable diet and exercise.'
+            'You have a higher body weight than normal, and at an increased risk of associated health problems. Try to lose weight with suitable diet and exercise.'
       };
     else if (_bmi > 25 && _bmi < 30)
       return {
         'result': 'Overweight',
         'interpretation':
-            'You have a higher body weight than normal. Try to lose some weight by a suitable diet and exercise.'
+            'You have a higher body weight than normal. Try to lose some weight with suitable diet and exercise.'
       };
     else if (_bmi > 18.5 && _bmi < 25)
       return {
         'result': 'Normal',
-        'interpretation': 'You have a normal body weight. Keep it up!'
+        'interpretation': 'You have a normal body weight. Good job!'
       };
     else
       return {
         'result': 'Underweight',
         'interpretation':
-            'You have a lower body weight than normal. Try to gain some weight by a suitable diet and exercise.'
+            'You have a lower body weight than normal. Try to gain some weight with suitable diet and exercise.'
       };
   }
 }

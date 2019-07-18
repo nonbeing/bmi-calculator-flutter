@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const mainBackgroundColor = Color(0xff0a0e21);
+const mainThemeColor = Color(0xff0a0e21);
+
 const kTextColor = Color(0xFF8d8e98);
 
 const kLabelTextStyle = TextStyle(
@@ -8,7 +11,7 @@ const kLabelTextStyle = TextStyle(
 );
 
 const unselectedIconColor = Color(0xff757575);
-const selectedIconColor = Color(0xffeeeeee);
+const selectedIconColor = Color(0xfffefefe);
 
 const kNumberStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.w900);
 const kResultTitleStyle =
