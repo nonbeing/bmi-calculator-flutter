@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'package:bmi_calculator/screens/input_page.dart';
 
 const mainBackgroundColor = Color(0xff0a0e21);
 
