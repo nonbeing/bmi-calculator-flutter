@@ -4,7 +4,8 @@ import 'package:bmi_calculator/constants.dart';
 class TopCard extends StatelessWidget {
   final IconData iconName;
   final String cardText;
-  const TopCard({this.iconName, this.cardText});
+  final Color iconColor;
+  const TopCard({this.iconName, this.cardText, this.iconColor = Colors.grey});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class TopCard extends StatelessWidget {
         Icon(
           iconName,
           size: 80.0,
-          color: Colors.grey,
+          color: iconColor,
         ),
         SizedBox(
           height: 15.0,

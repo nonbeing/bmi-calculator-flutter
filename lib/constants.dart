@@ -7,6 +7,9 @@ const kLabelTextStyle = TextStyle(
   color: kTextColor,
 );
 
+const unselectedIconColor = Color(0xff757575);
+const selectedIconColor = Color(0xffeeeeee);
+
 const kNumberStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.w900);
 const kResultTitleStyle =
     TextStyle(fontSize: 50.0, fontWeight: FontWeight.w500);

@@ -3,10 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/components/top_card.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
-import 'results_page.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
 import 'package:bmi_calculator/components/round_icon_button.dart';
 import 'package:bmi_calculator/calculator_brain.dart';
+import 'results_page.dart';
 
 enum Gender { male, female }
 
@@ -40,6 +40,9 @@ class _InputPageState extends State<InputPage> {
                         : kInactiveCardColor,
                     cardChild: TopCard(
                       iconName: FontAwesomeIcons.mars,
+                      iconColor: selectedGender == Gender.male
+                          ? selectedIconColor
+                          : unselectedIconColor,
                       cardText: 'MALE',
                     ),
                     onTapAction: () {
@@ -56,6 +59,9 @@ class _InputPageState extends State<InputPage> {
                         : kInactiveCardColor,
                     cardChild: TopCard(
                       iconName: FontAwesomeIcons.venus,
+                      iconColor: selectedGender == Gender.female
+                          ? selectedIconColor
+                          : unselectedIconColor,
                       cardText: 'FEMALE',
                     ),
                     onTapAction: () {
